@@ -7,6 +7,7 @@ import { CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 import { Disclosure } from '@headlessui/react';
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { stats, features, tiers, navigation, faqs } from '../../mockdata'
+import LoginButton from '../components/LoginButton'
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
@@ -46,9 +47,7 @@ export default function LandingPage() {
                         ))}
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <a href="/login" className="text-sm/6 font-semibold text-gray-900">
-                            Log in <span aria-hidden="true">&rarr;</span>
-                        </a>
+                        <LoginButton />
                     </div>
                 </nav>
                 <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -86,12 +85,7 @@ export default function LandingPage() {
                                     ))}
                                 </div>
                                 <div className="py-6">
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                    >
-                                        Log in
-                                    </a>
+                                    <LoginButton />
                                 </div>
                             </div>
                         </div>

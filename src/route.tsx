@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import App from "./App";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
@@ -20,6 +20,8 @@ export default function AppRouter() {
             <Route path="register" element={<RegistrationPage />} />
 
             <Route path="dashboard" element={<DashboardLayout />}>
+                <Route index element={<Navigate to="home" replace />} />
+                <Route path="" element={<Navigate to="home" replace />} />
                 <Route path="home" element={<Dashboard />} />
                 <Route path="expenses" element={<Expenses />} />
                 <Route path="reports" element={<Reports />} />
