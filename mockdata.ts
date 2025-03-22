@@ -1,10 +1,11 @@
+import { ChartBarIcon, CloudArrowUpIcon, LockClosedIcon, WalletIcon } from "@heroicons/react/16/solid";
 
-const stats = [
+export const stats = [
     { id: 1, name: 'Active Users', value: '100,000+' },
     { id: 2, name: 'Transactions Tracked', value: '$2.5B+' },
     { id: 3, name: 'Money Saved', value: '$500M+' },
 ]
-const features = [
+export const features = [
     {
         name: 'Easy Tracking',
         description: 'Track all your expenses in one place with our intuitive interface and smart categorization.',
@@ -26,7 +27,7 @@ const features = [
         icon: WalletIcon,
     },
 ];
-const tiers = [
+export const tiers = [
     {
         name: 'Free',
         id: 'tier-free',
@@ -59,7 +60,7 @@ const tiers = [
     },
 ]
 
-const faqs = [
+export const faqs = [
     {
         id: 1,
         question: 'How does the expense tracking work?',
@@ -86,7 +87,7 @@ const faqs = [
         answer: 'Yes, you can cancel your Pro subscription at any time. Your data will remain accessible on the Free plan.'
     }
 ]
-const navigation = [
+export const navigation = [
     { name: 'Product', href: '#' },
     { name: 'Features', href: '#' },
     { name: 'Marketplace', href: '#' },

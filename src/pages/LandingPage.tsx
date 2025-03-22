@@ -1,12 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { Dialog, DialogPanel, Transition } from '@headlessui/react'
-import { Bars3Icon, CalendarDaysIcon, ChartBarIcon, HandRaisedIcon, MinusIcon, PlusIcon, ServerIcon, WalletIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Dialog, DialogPanel, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react'
+import { Bars3Icon, CalendarDaysIcon, HandRaisedIcon, MinusIcon, PlusIcon, ServerIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 import { Disclosure } from '@headlessui/react';
 import { CheckIcon } from '@heroicons/react/20/solid'
-
+import { stats, features, tiers, navigation, faqs } from '../../mockdata'
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
@@ -348,7 +348,7 @@ export default function LandingPage() {
                     </p>
                 </div>
                 <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">
-                    Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer
+                    Choose an affordable plan that&apos;s packed with the best features for engaging your audience, creating customer
                     loyalty, and driving sales.
                 </p>
                 <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
@@ -418,35 +418,38 @@ export default function LandingPage() {
                     ))}
                 </div>
             </div>
-            <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                <h1 className='text-center text-4xl py-4'>FAQ</h1>
-                {faqs.map((faq) => (
-                    <Disclosure>
-                        {({ open }) => (
-                            <>
-                                <div key={faq.id}>
-                                    <Disclosure.Button className="flex w-full justify-between border-black border-t-2 px-4 py-3 mb-2 text-left font-medium text-gray-600">
-                                        <span>{faq.question}</span>
-                                        {open ? <MinusIcon className="size-6 " /> : <PlusIcon className="size-6" />}
-                                    </Disclosure.Button>
-                                    <Transition
-                                        show={open}
-                                        enter="transition duration-1000 ease-out"
-                                        enterFrom="transform scale-95 opacity-0"
-                                        enterTo="transform scale-100 opacity-100"
-                                        leave="transition duration-100 ease-out"
-                                        leaveFrom="transform scale-100 opacity-100"
-                                        leaveTo="transform scale-95 opacity-0"
-                                    >
-                                        <Disclosure.Panel static className="text-gray-500 flex w-full justify-between rounded-lg px-4 mb-2 text-left text-sm font-medium">
-                                            {faq.answer}
-                                        </Disclosure.Panel>
-                                    </Transition>
-                                </div>
-                            </>
-                        )}
-                    </Disclosure>
-                ))}
+            <div className="py-16 sm:py-24">
+
+                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                    <h1 className='text-center text-4xl py-4'>FAQ</h1>
+                    {faqs.map((faq) => (
+                        <Disclosure>
+                            {({ open }) => (
+                                <>
+                                    <div key={faq.id}>
+                                        <DisclosureButton className="flex w-full justify-between border-black border-t-2 px-4 py-3 mb-2 text-left font-medium text-gray-600">
+                                            <span>{faq.question}</span>
+                                            {open ? <MinusIcon className="size-6 " /> : <PlusIcon className="size-6" />}
+                                        </DisclosureButton>
+                                        <Transition
+                                            show={open}
+                                            enter="transition duration-1000 ease-out"
+                                            enterFrom="transform scale-95 opacity-0"
+                                            enterTo="transform scale-100 opacity-100"
+                                            leave="transition duration-100 ease-out"
+                                            leaveFrom="transform scale-100 opacity-100"
+                                            leaveTo="transform scale-95 opacity-0"
+                                        >
+                                            <DisclosurePanel static className="text-gray-500 flex w-full justify-between rounded-lg px-4 mb-2 text-left text-sm font-medium">
+                                                {faq.answer}
+                                            </DisclosurePanel>
+                                        </Transition>
+                                    </div>
+                                </>
+                            )}
+                        </Disclosure>
+                    ))}
+                </div>
             </div>
 
             <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
@@ -499,6 +502,59 @@ export default function LandingPage() {
                                 </dd>
                             </div>
                         </dl>
+                    </div>
+                    <div className="mt-16 border-t border-white/10 pt-8">
+                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                                <div>
+                                    <h3 className="text-sm font-semibold text-white">Company</h3>
+                                    <ul role="list" className="mt-4 space-y-2">
+                                        <li>
+                                            <a href="#" className="text-sm text-gray-400 hover:text-white">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="text-sm text-gray-400 hover:text-white">Careers</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="text-sm font-semibold text-white">Support</h3>
+                                    <ul role="list" className="mt-4 space-y-2">
+                                        <li>
+                                            <a href="#" className="text-sm text-gray-400 hover:text-white">Help Center</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="text-sm text-gray-400 hover:text-white">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="text-sm font-semibold text-white">Legal</h3>
+                                    <ul role="list" className="mt-4 space-y-2">
+                                        <li>
+                                            <a href="#" className="text-sm text-gray-400 hover:text-white">Privacy</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="text-sm text-gray-400 hover:text-white">Terms</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="text-sm font-semibold text-white">Social</h3>
+                                    <ul role="list" className="mt-4 space-y-2">
+                                        <li>
+                                            <a href="#" className="text-sm text-gray-400 hover:text-white">Twitter</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="text-sm text-gray-400 hover:text-white">LinkedIn</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="mt-8 border-t border-white/10 pt-8">
+                                <p className="text-xs text-gray-400">&copy; 2024 E-xpense. All rights reserved.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div aria-hidden="true" className="absolute top-0 left-1/2 -z-10 -translate-x-1/2 blur-3xl xl:-top-6">
