@@ -20,7 +20,7 @@ export default function AppRouter() {
             <Route path="register" element={<RegistrationPage />} />
 
             <Route path="dashboard" element={<DashboardLayout />}>
-                <Route index element={<Dashboard />} />
+                <Route path="home" element={<Dashboard />} />
                 <Route path="expenses" element={<Expenses />} />
                 <Route path="reports" element={<Reports />} />
                 <Route path="categories" element={<Categories />} />
