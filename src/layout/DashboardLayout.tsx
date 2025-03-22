@@ -1,13 +1,13 @@
 import {
     CalendarIcon,
     ChartPieIcon,
-    Cog6ToothIcon,
     DocumentDuplicateIcon,
     FolderIcon,
     HomeIcon
 } from '@heroicons/react/24/outline'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import ProtectedRoute from '../components/ProtectedRoute';
+import SettingsDropdown from '../components/SettingsDropDown';
 
 const navigation = [
     { name: 'Dashboard', href: 'home', icon: HomeIcon },
@@ -58,16 +58,8 @@ export default function DashboardLayout() {
                                     </ul>
                                 </li>
                                 <li className="mt-auto">
-                                    <Link
-                                        to="settings"
-                                        className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
-                                    >
-                                        <Cog6ToothIcon
-                                            className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
-                                            aria-hidden="true"
-                                        />
-                                        Settings
-                                    </Link>
+                                    <SettingsDropdown />
+
                                 </li>
                             </ul>
                         </nav>
