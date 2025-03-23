@@ -1,9 +1,5 @@
 import { useState } from 'react';
 import { PlusIcon, PencilIcon, TrashIcon } from '@heroicons/react/24/outline';
-import { Dialog } from '@headlessui/react';
-import { Menu } from '@headlessui/react';
-import { Transition } from '@headlessui/react';
-import { Fragment } from 'react';
 
 import Modal from '../components/Modal';
 import { Category } from '../interfaces/category';
