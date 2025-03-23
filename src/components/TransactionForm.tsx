@@ -1,12 +1,14 @@
 import { useForm } from 'react-hook-form';
 import { TransactionFormInputs } from '../interfaces/dashboard-common';
-
+import { Expense } from '../interfaces/expense';
 
 interface TransactionFormProps {
-    onSubmit: (data: TransactionFormInputs) => void;
-    onCancel: () => void;
     type: 'expense' | 'income';
+    onSubmit: (data: any) => void;
+    categories?: string[];
+    onCancel: () => void;
     isLoading?: boolean;
+    initialData?: Expense | null;
 }
 
 export default function TransactionForm({ onSubmit, onCancel, type, isLoading }: TransactionFormProps) {
