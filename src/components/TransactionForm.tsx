@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { TransactionFormInputs } from '../interfaces/dashboard-common';
 import { Expense } from '../interfaces/expense';
+import { Income } from '../interfaces/income';
 
 interface TransactionFormProps {
     type: 'expense' | 'income';
@@ -8,7 +9,7 @@ interface TransactionFormProps {
     categories?: string[];
     onCancel: () => void;
     isLoading?: boolean;
-    initialData?: Expense | null;
+    initialData?: Expense | Income | null;
 }
 
 export default function TransactionForm({ onSubmit, onCancel, type, isLoading }: TransactionFormProps) {

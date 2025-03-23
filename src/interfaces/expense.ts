@@ -1,16 +1,17 @@
+import { BaseFilters } from "./transactions";
+
 export interface Expense {
-    id: number;
+    id: string;
     description: string;
     amount: number;
     category: string;
     date: string;
-    paymentMethod: 'cash' | 'credit' | 'debit' | 'online';
     status: 'completed' | 'pending' | 'cancelled';
-    tags?: string[];
-    notes?: string;
+    paymentMethod: string;
+    isRecurring: boolean;  
 }
 
-export interface ExpenseFilters {
+export interface ExpenseFilters extends BaseFilters {
     startDate?: string;
     endDate?: string;
     category?: string;

@@ -4,9 +4,7 @@ import { Expense, ExpenseFilters } from '../interfaces/expense';
 import Modal from '../components/Modal';
 import { useAddExpenseMutation, useGetExpensesQuery, useUpdateExpenseMutation } from '../store/slices/expenseApi';
 import TransactionForm from '../components/TransactionForm';
-import FilterPanel from '../components/FilterSection';
-import TransactionTable from '../components/TransactionTable';
-import { Pagination } from '../components/Pagination';
+import { TransactionPanel } from '../components/TransactionPanel';
 
 export default function Expenses() {
     const [page, setPage] = useState(0);
@@ -113,44 +111,35 @@ export default function Expenses() {
                     </div>
                 </div>
 
-                {/* Main Content */}
+                {/* Main Content - Remove the showFilters condition */}
                 <div className="mt-4 bg-white shadow sm:rounded-lg">
-                    {showFilters && (
-                        <FilterPanel
-                            filters={filters}
-                            onFilterChange={handleFilterChange}
-                            categories={data?.categories}
-                            pageSize={pageSize}
-                            onPageSizeChange={setPageSize}
-                            onResetFilters={handleFilterReset}
-                            type="expense"
-                        />
-                    )}
-
-                    <TransactionTable
+                    <TransactionPanel<Expense, ExpenseFilters>
                         data={data?.expenses || []}
+                        filters={filters}
+                        onFilterChange={handleFilterChange}
+                        onSort={handleSort}
                         sortField={sortField}
                         sortDirection={sortDirection}
-                        onSort={handleSort}
                         onEdit={(expense) => {
                             setSelectedExpense(expense);
                             setIsModalOpen(true);
                         }}
-                        type="expense"
-                    />
-
-                    <Pagination
-                        currentPage={page}
+                        categories={data?.categories || []}
                         pageSize={pageSize}
+                        onPageSizeChange={setPageSize}
                         total={data?.total || 0}
+                        currentPage={page}
                         onPageChange={setPage}
+                        type="expense"
+                        onResetFilters={handleFilterReset}
+                        showFilters={showFilters}
                     />
                 </div>
 
                 {/* Modal */}
                 {isModalOpen && (
                     <Modal
-                        title='Add Expense'
+                        title={selectedExpense ? 'Edit Expense' : 'Add Expense'}
                         open={isModalOpen}
                         onClose={() => {
                             setIsModalOpen(false);

@@ -12,6 +12,7 @@ import SettingsDropdown from '../components/SettingsDropDown';
 const navigation = [
     { name: 'Dashboard', href: 'home', icon: HomeIcon },
     { name: 'Expenses', href: 'expenses', icon: DocumentDuplicateIcon },
+    { name: 'Incomes', href: 'incomes', icon: DocumentDuplicateIcon },
     { name: 'Reports', href: 'reports', icon: ChartPieIcon },
     { name: 'Categories', href: 'categories', icon: FolderIcon },
     { name: 'Budget', href: 'budget', icon: CalendarIcon },

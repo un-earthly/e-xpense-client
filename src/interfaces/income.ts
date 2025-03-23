@@ -1,3 +1,5 @@
+import { BaseFilters } from "./transactions";
+
 export interface Income {
     id: string;
     description: string;
@@ -9,7 +11,7 @@ export interface Income {
     paymentMethod: string;
 }
 
-export interface IncomeFilters {
+export interface IncomeFilters extends BaseFilters {
     startDate?: string;
     endDate?: string;
     category?: string;
@@ -17,6 +19,6 @@ export interface IncomeFilters {
     status?: string;
     searchTerm?: string;
     isRecurring?: boolean;
-    minAmount?: string;
-    maxAmount?: string;
+    minAmount?: number;
+    maxAmount?: number;
 }
