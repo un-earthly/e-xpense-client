@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FunnelIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { Expense, ExpenseFilters } from '../interfaces/expense';
 import Modal from '../components/Modal';
-import { useAddExpenseMutation, useGetExpensesQuery, useUpdateExpenseMutation } from '../store/slices/expenseApi';
+import { useAddExpenseMutation, useGetExpensesQuery, useUpdateExpenseMutation } from '../store/services/expenseApi';
 import TransactionForm from '../components/TransactionForm';
 import { TransactionPanel } from '../components/TransactionPanel';
 

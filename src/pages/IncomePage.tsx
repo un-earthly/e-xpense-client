@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FunnelIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { Income, IncomeFilters } from '../interfaces/income';
 import Modal from '../components/Modal';
-import { useAddIncomeMutation, useGetIncomesQuery, useUpdateIncomeMutation } from '../store/slices/incomeApi';
+import { useAddIncomeMutation, useGetIncomesQuery, useUpdateIncomeMutation } from '../store/services/incomeApi';
 import TransactionForm from '../components/TransactionForm';
 import { TransactionPanel } from '../components/TransactionPanel';
 
@@ -136,7 +136,7 @@ export default function IncomePage() {
                         }}
                         type="income"
                         onResetFilters={handleFilterReset}
-                        showFilters={showFilters} 
+                        showFilters={showFilters}
                     />
                 </div>
 

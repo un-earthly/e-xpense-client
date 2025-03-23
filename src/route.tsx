@@ -6,7 +6,7 @@ import DashboardLayout from "./layout/DashboardLayout";
 import Dashboard from "./pages/Dashboard";
 import Expenses from "./pages/ExpensesPage.tsx";
 import Reports from "./pages/ReportsPage.tsx";
-import Categories from "./pages/Categories";
+import Categories from "./pages/CategoriesPage.tsx";
 import Budget from "./pages/BudgetPage.tsx";
 import Profile from "./pages/ProfilePage.tsx";
 import Settings from "./pages/SettingsPage.tsx";
