@@ -1,0 +1,173 @@
+{
+    "stats": [
+        {
+            "name": "Total Balance",
+            "stat": "$12,000",
+            "change": "12%",
+            "changeType": "increase"
+        },
+        {
+            "name": "Total Expenses",
+            "stat": "$4,000",
+            "change": "2.1%",
+            "changeType": "decrease"
+        },
+        {
+            "name": "Total Income",
+            "stat": "$16,000",
+            "change": "4.3%",
+            "changeType": "increase"
+        }
+    ],
+    "recentTransactions": [
+        {
+            "id": 1,
+            "name": "Groceries",
+            "amount": -120,
+            "date": "2025-03-22",
+            "category": "Food",
+            "type": "expense"
+        },
+        {
+            "id": 2,
+            "name": "Salary",
+            "amount": 5000,
+            "date": "2025-03-21",
+            "category": "Income",
+            "type": "income"
+        }
+    ],
+    "monthlyData": [
+        {
+            "date": "2025-03-01",
+            "income": 5000,
+            "expense": 2400
+        },
+        {
+            "date": "2025-03-07",
+            "income": 3000,
+            "expense": 1398
+        }
+    ],
+    "topCategories": [
+        {
+            "name": "Food",
+            "amount": 1200,
+            "percentage": 30
+        },
+        {
+            "name": "Entertainment",
+            "amount": 800,
+            "percentage": 20
+        }
+    ],
+    "highestSpendingDay": {
+        "date": "2025-03-15",
+        "amount": 520.45,
+        "transactions": 5
+    },
+    "upcomingBills": [
+        {
+            "id": 1,
+            "name": "Rent",
+            "amount": 1200,
+            "dueDate": "2025-04-01"
+        },
+        {
+            "id": 2,
+            "name": "Internet",
+            "amount": 79.99,
+            "dueDate": "2025-03-28"
+        },
+        {
+            "id": 3,
+            "name": "Phone Bill",
+            "amount": 45.00,
+            "dueDate": "2025-03-30"
+        }
+    ],
+    "spendingInsights": [
+        {
+            "category": "Food & Dining",
+            "amount": 850.25,
+            "percentage": 25,
+            "trend": "up",
+            "comparedTo": 15
+        },
+        {
+            "category": "Transportation",
+            "amount": 425.50,
+            "percentage": 12,
+            "trend": "down",
+            "comparedTo": -8
+        },
+        {
+            "category": "Entertainment",
+            "amount": 320.75,
+            "percentage": 9,
+            "trend": "stable",
+            "comparedTo": 2
+        }
+    ],
+    "dailyExpenses": [
+        {
+            "date": "2025-03-01",
+            "amount": 45.50
+        },
+        {
+            "date": "2025-03-02",
+            "amount": 120.75
+        },
+        {
+            "date": "2025-03-03",
+            "amount": 65.25
+        }
+    ],
+    "recurringExpenses": [
+        {
+            "id": 1,
+            "name": "Netflix Subscription",
+            "amount": 15.99,
+            "category": "Entertainment",
+            "frequency": "monthly",
+            "nextDueDate": "2025-04-15",
+            "status": "active"
+        },
+        {
+            "id": 2,
+            "name": "Gym Membership",
+            "amount": 49.99,
+            "category": "Health",
+            "frequency": "monthly",
+            "nextDueDate": "2025-04-01",
+            "status": "active"
+        },
+        {
+            "id": 3,
+            "name": "Rent Payment",
+            "amount": 1200.00,
+            "category": "Housing",
+            "frequency": "monthly",
+            "nextDueDate": "2025-04-01",
+            "status": "active"
+        },
+        {
+            "id": 4,
+            "name": "Cloud Storage",
+            "amount": 9.99,
+            "category": "Subscriptions",
+            "frequency": "monthly",
+            "nextDueDate": "2025-04-05",
+            "status": "active"
+        },
+        {
+            "id": 5,
+            "name": "Car Insurance",
+            "amount": 89.99,
+            "category": "Insurance",
+            "frequency": "monthly",
+            "nextDueDate": "2025-04-10",
+            "status": "active"
+        }
+    ]
+}
