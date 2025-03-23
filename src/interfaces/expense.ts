@@ -8,7 +8,9 @@ export interface Expense {
     date: string;
     status: 'completed' | 'pending' | 'cancelled';
     paymentMethod: string;
-    isRecurring: boolean;  
+    isRecurring: boolean;
+    tags?: string[];
+    notes?: string;
 }
 
 export interface ExpenseFilters extends BaseFilters {

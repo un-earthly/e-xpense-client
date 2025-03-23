@@ -9,6 +9,8 @@ export interface Income {
     isRecurring: boolean;
     status: 'completed' | 'pending' | 'cancelled';
     paymentMethod: string;
+    tags: string[];
+    notes: string;
 }
 
 export interface IncomeFilters extends BaseFilters {

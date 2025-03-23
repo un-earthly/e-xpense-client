@@ -1,13 +1,14 @@
 {
     "expenses": [
         {
-            "id": 1,
+            "id": "1",
             "description": "Grocery Shopping",
             "amount": 156.78,
             "category": "Food",
             "date": "2025-03-23",
             "paymentMethod": "credit",
             "status": "completed",
+            "isRecurring": false,
             "tags": [
                 "groceries",
                 "household"
@@ -15,26 +16,28 @@
             "notes": "Monthly grocery shopping"
         },
         {
-            "id": 2,
+            "id": "2",
             "description": "Electricity Bill",
             "amount": 89.99,
             "category": "Utilities",
             "date": "2025-03-22",
             "paymentMethod": "online",
             "status": "pending",
+            "isRecurring": true,
             "tags": [
                 "bills",
                 "monthly"
             ]
         },
         {
-            "id": 3,
+            "id": "3",
             "description": "Movie Tickets",
             "amount": 32.50,
             "category": "Entertainment",
             "date": "2025-03-21",
             "paymentMethod": "debit",
             "status": "completed",
+            "isRecurring": false,
             "tags": [
                 "entertainment",
                 "weekend"
