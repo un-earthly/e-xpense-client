@@ -10,12 +10,10 @@ export const categoryApi = createApi({
             queryFn: () => {
                 return new Promise((resolve) => {
                     setTimeout(() => {
-                        // Mock data - replace with actual API call
                         resolve({
                             data: [
                                 { id: '1', name: 'Food', type: 'expense', color: '#FF5733' },
                                 { id: '2', name: 'Salary', type: 'income', color: '#33FF57' },
-                                // Add more mock categories...
                             ]
                         });
                     }, 500);

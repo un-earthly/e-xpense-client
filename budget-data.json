@@ -1,0 +1,44 @@
+{
+    "budgets": [
+        {
+            "id": "1",
+            "category": "Food",
+            "amount": 500.00,
+            "spent": 325.50,
+            "period": "monthly",
+            "startDate": "2025-03-01",
+            "endDate": "2025-03-31",
+            "status": "active",
+            "notes": "Monthly food budget"
+        },
+        {
+            "id": "2",
+            "category": "Entertainment",
+            "amount": 200.00,
+            "spent": 150.75,
+            "period": "monthly",
+            "startDate": "2025-03-01",
+            "endDate": "2025-03-31",
+            "status": "active"
+        },
+        {
+            "id": "3",
+            "category": "Transportation",
+            "amount": 300.00,
+            "spent": 280.00,
+            "period": "monthly",
+            "startDate": "2025-03-01",
+            "endDate": "2025-03-31",
+            "status": "warning",
+            "notes": "Transport budget"
+        }
+    ],
+    "categories": [
+        "Food",
+        "Entertainment",
+        "Transportation",
+        "Utilities",
+        "Shopping",
+        "Health"
+    ]
+}

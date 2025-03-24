@@ -5,6 +5,7 @@ import Modal from '../components/Modal';
 import { Category } from '../interfaces/category';
 import { useAddCategoryMutation, useDeleteCategoryMutation, useGetCategoriesQuery, useUpdateCategoryMutation } from '../store/services/categoryApi';
 import CategoryForm from '../components/CategoryForm';
+import { CategoryAnalytics } from '../components/CategoryAnalytics';
 
 export default function Categories() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -152,6 +153,10 @@ export default function Categories() {
                     </div >
                 </div >
 
+                {/* Analytics Section */}
+                {categories && categories.length > 0 && (
+                    <CategoryAnalytics categories={categories} />
+                )}
 
                 {
                     isModalOpen && (
